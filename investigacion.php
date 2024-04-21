@@ -1,8 +1,7 @@
-
 <?php
 include("app/BaseDatos.php");
-$bd =new BaseDatos();
-$rows =$bd->consulta("SELECT * FROM `targetas`");
+$bd = new BaseDatos();
+$rows = $bd->consulta("SELECT * FROM `targetas`");
 
 
 include("plantillas/inicio.php");
@@ -24,31 +23,32 @@ include('plantillas/menu.php');
   }
 </style>
 
-<?php
 
-foreach($rows as $d){
-  //echo $d['id']." ".$d['titulo']."</br>";
-?>
 
 <br><br>
-  <div class="container" style="padding: 20px;">
-    <div class="row">
+<div class="container" style="padding: 20px;">
+  <div class="row">
+
+    <?php //al colocar este codigo php en esta parte las cartas se ordenaran de izquierda a derecha en vez de arriba hacia abajo
+
+    foreach ($rows as $d) {
+      //echo $d['id']." ".$d['titulo']."</br>";
+    ?>
       <div class="col-md-6">
-        <div class="card">
+        <div class="card mb-6">
           <img src="images/caru2.jpg" class="card-img-top" alt="Investigación 1">
           <div class="card-body">
-            <h5 class="card-title"><?php echo $d['titulo'];?></h5>
-            <p class="card-text"><?php echo $d['descripcion']; ?></a> <!-- Reemplaza "url_de_la_pagina_1" con la URL a la que deseas conectar -->
+            <h5 class="card-title"><?php echo $d['titulo']; ?></h5><!--aqui se agregara el titulo de cada card-->
+            <p class="card-text"><?php echo $d['descripcion']; ?></a> <!--y esta sera su descripcion todo se encuentra guardado en la base de datos-->
           </div>
         </div>
       </div>
-      
-    </div>
+    <?php } ?>
+
   </div>
+</div>
 
 <?php
-
-}
 
 include("plantillas/final.php");
 ?>
