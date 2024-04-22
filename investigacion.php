@@ -36,7 +36,7 @@ include('plantillas/menu.php');
     ?>
       <div class="col-md-6">
         <div class="card mb-6">
-          <img src="images/caru2.jpg" class="card-img-top" alt="Investigación 1">
+          <img src="images/caru.jpg" class="card-img-top" alt="Investigación 1">
           <div class="card-body">
             <h5 class="card-title"><?php echo $d['titulo']; ?></h5><!--aqui se agregara el titulo de cada card-->
             <p class="card-text"><?php echo $d['descripcion']; ?></a> <!--y esta sera su descripcion todo se encuentra guardado en la base de datos-->
