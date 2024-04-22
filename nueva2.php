@@ -1,5 +1,8 @@
 <?php
-include ("plantillas/inicio.php")
+include ("plantillas/inicio.php");
+include("app/BaseDatos.php");
+$bd = new BaseDatos();
+$rows = $bd->consulta("SELECT * FROM `comentario`");
 ?>
 
 
@@ -169,6 +172,32 @@ include ("plantillas/inicio.php")
   </div>
 
 
+  <?php //al colocar este codigo php en esta parte las cartas se ordenaran de izquierda a derecha en vez de arriba hacia abajo
+
+foreach ($rows as $d) {
+  //echo $d['id']." ".$d['titulo']."</br>";
+?>
+
+  <div class="container" style="padding: 20px;">
+  <div class="row">
+
+    
+      <div class="col-md-12">
+        <div class="card mb-6"> 
+          <div class="card-body">
+            <h5 class="card-title"><?php echo $d['nombre']; ?></h5><!--aqui se agregara el titulo de cada card-->
+            <p class="card-text"><?php echo $d['comentario']; ?></a> <!--y esta sera su descripcion todo se encuentra guardado en la base de datos-->
+          </div>
+        </div>
+      </div>
+    
+
+  </div>
+</div>
+<?php } ?>
+
+
+
 
   <!--
     ------------------------------------------------------------------------------------------------------
@@ -221,11 +250,11 @@ include ("plantillas/inicio.php")
     <div class="footer-section">
       <h2>Comentarios</h2>
       <div class="comment_btn">
-        <form>
-          <textarea class="textbox" placeholder="Nombre"></textarea>
-          <textarea class="textbox" placeholder="Email"></textarea>
-          <textarea class="textbox" placeholder="Telefono"></textarea>
-          <textarea class="comment" placeholder="Escribe tu comentario aqui..."></textarea>
+        <form method="POST" action="app/guardarComment.php">
+          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+          <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+          <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono"><br> 
+          <input type="text" class="form-control" id="comentario" name="comentario" placeholder="Comentario" style="height: 200px; top: 0px;">
           <button type="submit" style="color: white ; background-color: gray; border: none; border-radius:10px;">Enviar</button>
         </form>
       </div>
