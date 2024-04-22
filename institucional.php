@@ -1,5 +1,8 @@
 <?php
-include("plantillas/inicio.php")
+$titulo='institucional';
+include("plantillas/inicio.php");
+
+include('plantillas/menu.php')
 ?>
 
 
@@ -9,9 +12,6 @@ include("plantillas/inicio.php")
     }
 </style>
 
-<?php
-include('plantillas/menu.php')
-?>
 
 
 
@@ -31,7 +31,6 @@ include('plantillas/menu.php')
 <br>
 <br>
 <br>
-
 
 <div class="section margin-top_50">
     <div class="container">
@@ -69,7 +68,7 @@ include('plantillas/menu.php')
 </div>
 
 <footer class="footer">
-    <h3>USFX DTIC 2024</h3>
+    <h3>USFX Medicina 2024</h3>
 </footer>
 
 

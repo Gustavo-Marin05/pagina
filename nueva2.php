@@ -1,6 +1,7 @@
 <?php
 include ("plantillas/inicio.php");
 include("app/BaseDatos.php");
+$titulo='facultad de medicina';
 $bd = new BaseDatos();
 $rows = $bd->consulta("SELECT * FROM `comentario`");
 ?>
