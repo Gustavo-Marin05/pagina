@@ -1,13 +1,16 @@
 <?php
+$titulo = 'Investigacion';
 include("app/BaseDatos.php");
-$titulo='Investigacion';
+include("plantillas/inicio.php");
+include("plantillas/menu.php");
+
+
 $bd = new BaseDatos();
 $rows = $bd->consulta("SELECT * FROM `targetas`");
+$imagen = $bd->consulta("SELECT * FROM `imagenes`");
 
 
-include("plantillas/inicio.php");
 
-include('plantillas/menu.php');
 ?>
 
 
@@ -18,9 +21,20 @@ include('plantillas/menu.php');
     /* Ajusta la altura según tus necesidades */
     object-fit: cover;
   }
-
-  
 </style>
+
+<div>
+  <img src="images/<?php echo $imagen[1]['imagendef']; ?>" class="img-fluid" alt="">
+  <div class="text-container">
+
+    <h1 class="mar" styles="width: 100vw; height: auto; overflow:hidden;">INVESTIGACION</h1>
+    <h4>La Facultad de Medicina te ofrece nuestro plan de estudio, perfil de la carrera, modalidad de admicion y graduacion</h4>
+    
+
+  </div>
+  
+</div>
+
 
 
 
@@ -46,6 +60,12 @@ include('plantillas/menu.php');
 
   </div>
 </div>
+
+
+<footer class="footer">
+    <h3>USFX Medicina 2024</h3>
+</footer>
+
 
 <?php
 

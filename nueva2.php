@@ -2,7 +2,6 @@
 include("plantillas/inicio.php"); //esto incluye el inicio del HTML 
 include("app/BaseDatos.php");
 include('plantillas/menu.php');
-$titulo = 'facultad de medicina'; //se agrego una variable titulo para que sea dinamico el nombre del titulo
 $bd = new BaseDatos();
 
 
@@ -19,6 +18,7 @@ $imagen = $bd->consulta("SELECT * FROM `imagenes`");
   <img src="images/<?php echo $imagen[1]['imagendef']; ?>" class="img-fluid" alt=""><!--con esto se esta accediendo a la imagen 2 de la base de datos-->
   <div class="text-container">
     <h1 class="mar">FACULTAD DE MEDICINA</h1>
+    <h4>universidad mayor real y pontificia san francico xavier de chuquisaca</h4>
   </div>
 
 </div>
@@ -52,7 +52,7 @@ $imagen = $bd->consulta("SELECT * FROM `imagenes`");
 
       </div>
       <div class="col-md-6" style="text-align: right;">
-        <img src="images/caru2.jpg" alt="imagen" style="width: 90%; border-radius:20px !important;" class="rounded float-end">
+        <img src="images/<?php echo $imagen[5]['imagendef']; ?>" alt="imagen" style="width: 90%; border-radius:20px !important;" class="rounded float-end">
       </div>
 
 
@@ -70,15 +70,9 @@ $imagen = $bd->consulta("SELECT * FROM `imagenes`");
 <div class="section margin-top_50">
   <div class="container">
     <div class="row">
-
       <div class="col-md-6" style="text-align: right;">
-        <img src="images/img6.png" alt="imagen" style="width: 90%; border-radius:20px !important;" class="rounded float-end">
+        <img src="images/<?php echo $imagen[6]['imagendef']; ?>" alt="imagen" style="width: 90%; border-radius:20px !important;" class="rounded float-end">
       </div>
-
-
-
-
-
       <div class="col-md-6">
         <div class="full">
           <div class="heading_main ">
@@ -86,20 +80,10 @@ $imagen = $bd->consulta("SELECT * FROM `imagenes`");
           </div>
           <div class="full" style="padding: 20px;">
             <p>Aplicar a la universidad de medicina es el primer paso hacia una carrera dedicada a salvar vidas y mejorar la salud de las personas. A través de una educación rigurosa y práctica, podrás adquirir los conocimientos y habilidades necesarias para convertirte en un profesional médico competente y compasivo. ¡Empieza tu viaje hacia una carrera gratificante en el campo de la medicina hoy mismo!
-
             </p>
-
-
-
-
           </div>
-
         </div>
-
       </div>
-
-
-
     </div>
   </div>
 </div>
@@ -162,6 +146,8 @@ $imagen = $bd->consulta("SELECT * FROM `imagenes`");
   </div>
 </div>
 
+<h2 style="text-align: center;">COMENTARIOS</h2>
+
 
 <?php //al colocar este codigo php en esta parte las cartas se ordenaran de izquierda a derecha en vez de arriba hacia abajo
 //$rows = $bd->consulta("SELECT * FROM `comentario`");
@@ -174,12 +160,13 @@ foreach ($rows as $d) {
 
 ?>
 
-  <div class="container" style="padding: 20px;">
+
+  <div class="container" style="border: #071f69; background-color: #071f69; padding: 15px; border-radius: 10px;">
     <div class="row">
 
 
       <div class="col-md-12">
-        <div class="card mb-6" style="border-radius: 10px; border: 1px solid #ccc;">
+        <div class="card mb-6">
           <div class="card-body">
             <h5 class="card-title"><?php echo $d['nombre']; ?></h5><!--aqui se agregara el titulo de cada card-->
             <p class="card-text"><?php echo $d['comentario']; ?></a> <!--y esta sera su descripcion todo se encuentra guardado en la base de datos-->
@@ -193,7 +180,7 @@ foreach ($rows as $d) {
 <?php $count++; // Incrementamos el contador después de mostrar cada comentario
 }
 ?>
-
+<br><br>
 
 
 

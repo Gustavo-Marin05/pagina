@@ -28,7 +28,7 @@
                             Carrera
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Calendario Academico</a></li>
+                            <li><a class="dropdown-item" href="https://medicina.usfx.bo/wp-content/uploads/2023/03/CALNEDA.png">Calendario Academico</a></li>
                             <li><a class="dropdown-item" href="#">Videos</a></li>
                         </ul>
                     </li>
