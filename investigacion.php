@@ -19,9 +19,7 @@ include('plantillas/menu.php');
     object-fit: cover;
   }
 
-  .navbar-custom {
-    background-color: #071f69 !important;
-  }
+  
 </style>
 
 

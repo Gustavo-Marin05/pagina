@@ -19,8 +19,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="institucional.php">Institucional</a></li>
-                            <li><a class="dropdown-item" href="#">Autoridades</a></li>
-                            <li><a class="dropdown-item" href="#">Plantel Docente</a></li>
+                            <li><a class="dropdown-item" href="autoridades.php">Autoridades</a></li>
                             <li><a class="dropdown-item" href="#">Acreditacion</a></li>
                         </ul>
                     </li>
@@ -47,3 +46,8 @@
     
 
 
+    <style>
+    .navbar-custom {
+        background-color: #071f69 !important;
+    }
+</style>

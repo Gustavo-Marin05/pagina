@@ -1,3 +1,6 @@
+.navbar-custom {
+  background-color: #071f69 !important;
+}
 
 .text-container {
   position: absolute;
@@ -5,37 +8,46 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
+  
+  background-color: rgba(255, 255, 255, 0.5);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+  border-radius: 20px;
+  padding: 10px;
+
 }
 
 
-.mar{
-    text-align: center;
-    font-size: 36px;
-    /*padding: 10%;*/
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-   
+.mar {
+  text-align: center;
+  font-size: 36px;
+  /*padding: 10%;*/
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+
+
 }
-.di{
-    font-family: serif;
-    font-style: italic;
+
+.di {
+  font-family: serif;
+  font-style: italic;
 }
 
 
-.titulo{
- text-align: center;
+.titulo {
+  text-align: center;
 }
 
-.carousel{
-    display: flex;
-    max-width: 500px;
-    
-    justify-content: center;
-    align-items: center;
+.carousel {
+  display: flex;
+  max-width: 500px;
+
+  justify-content: center;
+  align-items: center;
 }
-.hol{
-    font-size: xxx-large;
+
+.hol {
+  font-size: xxx-large;
   color: aliceblue;
 
 }
@@ -45,37 +57,45 @@
 
 
 .footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
 
-  }
-  
-  /* Estilos para las secciones del pie de página */
-  .footer-section {
-    width: 30%;
-    display: inline-block;
-  }
-  .footer-img {
-    max-width: 100%	; /* Ajusta el tamaño máximo de la imagen según sea necesario */
-    height: auto;
-  }
-  .footer-linkimg {
-    max-width: 50px	; /* Ajusta el tamaño máximo de la imagen según sea necesario */
-    height: auto;
-  }
-  .textbox{
-    width: 400px;
-    height: 30px;
-  }
-  .comment{
-    width: 400px;
-    height: 200px;
-  }
-  .comment_btn{
-    text-align: right;
-  }
-  .navbar-custom {
-    background-color: #071f69 !important;
+}
+
+/* Estilos para las secciones del pie de página */
+.footer-section {
+  width: 30%;
+  display: inline-block;
+}
+
+.footer-img {
+  max-width: 100%;
+  /* Ajusta el tamaño máximo de la imagen según sea necesario */
+  height: auto;
+}
+
+.footer-linkimg {
+  max-width: 50px;
+  /* Ajusta el tamaño máximo de la imagen según sea necesario */
+  height: auto;
+}
+
+.textbox {
+  width: 400px;
+  height: 30px;
+}
+
+.comment {
+  width: 400px;
+  height: 200px;
+}
+
+.comment_btn {
+  text-align: right;
+}
+
+.navbar-custom {
+  background-color: #071f69 !important;
 }

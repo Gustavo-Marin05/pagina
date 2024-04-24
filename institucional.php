@@ -6,12 +6,6 @@ include('plantillas/menu.php')
 ?>
 
 
-<style>
-    .navbar-custom {
-        background-color: #071f69 !important;
-    }
-</style>
-
 
 
 

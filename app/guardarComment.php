@@ -17,5 +17,5 @@
 	//echo $sql;
 	
 	$rows = $bd->consulta($sql);
-	echo "Datos insertados";
+	//echo "Datos insertados";
 ?>

@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php
-  if(!isset($titulo)|| empty($titulo)){
+  if(!isset($titulo)|| empty($titulo)){//defide la variable titulo esta no esta definida o si esta vacia ,si es el caso sera true
   $titulo='Facultad de medicina';
   }
 

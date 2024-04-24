@@ -17,5 +17,5 @@ $estado=$_POST["estado"];
 $rows =$bd->consulta("INSERT INTO targetas(titulo,descripcion,imagen,url,estado) values('$titulo','$descripcion','$imagen','$url','$estado')");
 //echo $sql;
 //$rows = $bd->consulta($sql);
-echo "datos insertados";
+//echo "datos insertados";
 ?>
